@@ -139,10 +139,13 @@ main {
 }
 
 #description {
-    font-size: 18px;
+    font-size: 24px;
     font-size: bold;
-    /*border   : 2px solid #f0780b;*/
-    padding: 10px;
+    padding  : 10px;
+}
+
+#description strong {
+    color: #f0780b;
 }
 
 footer {
