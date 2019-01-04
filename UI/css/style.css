@@ -148,7 +148,7 @@ main {
     color: #f0780b;
 }
 
-.sign-up {
+#sign-in, #sign-up {
     padding: 10px;
 }
 
