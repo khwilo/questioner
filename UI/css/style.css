@@ -148,6 +148,64 @@ main {
     color: #f0780b;
 }
 
+.sign-up {
+    padding: 10px;
+}
+
+.form-control {
+    position  : relative;
+    z-index   : 1;
+    background: #ffffff;
+    max-width : 360px;
+    margin    : 30px auto 100px;
+    padding   : 45px;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(35, 0, 0, 0.1);
+    border-top: 4px solid #f0780b;
+}
+
+.form-control button {
+    text-transform: uppercase;
+    outline       : 0;
+    background    : #f0780b;
+    width         : 100%;
+    border        : 0;
+    padding       : 15px;
+    color         : #ebf0f6;
+    font-size     : 16px;
+    cursor        : pointer;
+}
+
+.form-control .message {
+    margin   : 15px 0 0;
+    color    : #232323;
+    font-size: 16px;
+}
+
+.form-control .message a {
+    color          : #f5851f;
+    text-decoration: none;
+}
+
+#form-description {
+    color      : #0c0507;
+    padding    : 10px;
+    font-weight: 800;
+    font-size  : 24px;
+}
+
+.user-details-input {
+    outline   : 0;
+    background: #232323;
+    width     : 100%;
+    border    : 0;
+    margin    : 0 0 15px;
+    padding   : 15px;
+    box-sizing: border-box;
+    font-size : 16px;
+    color     : #ffffff;
+}
+
 footer {
     display         : table;
     padding-top     : 10px;
