@@ -152,6 +152,10 @@ main {
     padding: 10px;
 }
 
+#sign-in {
+    padding: 10px;
+}
+
 .form-control {
     position  : relative;
     z-index   : 1;
