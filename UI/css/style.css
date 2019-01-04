@@ -1,0 +1,249 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+    margin         : 0px;
+    padding        : 0px;
+    outline        : none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height          : 100%;
+    margin          : 0px;
+    padding         : 0px;
+    font-family     : 'Open Sans', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display       : flex;
+    flex-direction: column;
+    min-height    : 100vh;
+}
+
+section {
+    width    : 100%;
+    max-width: 1200px;
+    margin   : 0px auto;
+    display  : table;
+    position : relative;
+}
+
+header {
+    width        : 100%;
+    display      : table;
+    margin-bottom: 10px;
+    flex         : 0 0 auto;
+}
+
+#logo {
+    float      : left;
+    font-size  : 24px;
+    color      : #f0780b;
+    font-weight: 600;
+    padding    : 20px 0px;
+}
+
+nav {
+    width: auto;
+    float: right;
+}
+
+nav ul {
+    display: table;
+    float  : right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li:last-child {
+    padding-right: 0px;
+}
+
+nav ul li a {
+    color     : #0c0507;
+    font-size : 18px;
+    padding   : 25px 20px;
+    display   : inline-block;
+    transition: all 0.5s ease 0s;
+}
+
+nav ul li a:hover {
+    background-color: #f5851f;
+    color           : #f9f9f9;
+    transition      : all 0.5s ease 0s;
+}
+
+nav ul li a:hover i {
+    color     : #f9f9f9;
+    transition: all 0.5s ease 0s;
+}
+
+nav ul li a i {
+    padding-right: 10px;
+    color        : #0c0507;
+    transition   : all 0.5s ease 0s;
+}
+
+.toggle-menu ul {
+    display: table;
+    width  : 25px;
+}
+
+.toggle-menu ul li {
+    width           : 100%;
+    height          : 3px;
+    background-color: #0c0507;
+    margin-bottom   : 4px;
+}
+
+.toggle-menu ul li:last-child {
+    margin-bottom: 0px;
+}
+
+input[type=checkbox], label {
+    display: none;
+}
+
+main {
+    flex: 1;
+}
+
+.about-content {
+    margin    : 0px auto 40px auto;
+    display   : table;
+    padding   : 10px;
+    text-align: center;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+#motto {
+    font-weight  : bold;
+    font-size    : 24px;
+    width        : 20ch;
+    margin       : 2em 1em;
+    white-space  : nowrap;
+    overflow     : hidden;
+    border-bottom: 2px solid black;
+    animation    : typing 2s steps(20, end);
+}
+
+#description {
+    font-size: 24px;
+    font-size: bold;
+    padding  : 10px;
+}
+
+#description strong {
+    color: #f0780b;
+}
+
+footer {
+    display         : table;
+    padding-top     : 10px;
+    padding-bottom  : 30px;
+    width           : 100%;
+    background-color: #f5851f;
+    flex            : 0 0 auto;
+}
+
+.social-media {
+    margin : 0px auto;
+    display: table;
+}
+
+.social-media li {
+    float  : left;
+    padding: 0px 20px;
+}
+
+.social-media li a {
+    color     : #0c0507;
+    transition: all 0.5s ease 0s;
+    font-size : 30px;
+}
+
+.social-media li a:hover {
+    color     : #f9f9f9;
+    transition: all 0.5s ease 0s;
+}
+
+@media only screen and (max-width: 1400px) {
+    section {
+        max-width: 95%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    header {
+        padding: 20px 0px;
+    }
+
+    #logo {
+        padding: 0px;
+    }
+
+    input[type=checkbox] {
+        position  : absolute;
+        background: none;
+    }
+
+    input[type=checkbox]:focus {
+        background: none;
+    }
+
+    label {
+        float  : right;
+        padding: 8px 0px;
+        display: inline-block;
+        cursor : pointer;
+    }
+
+    input[type=checkbox]:checked ~ nav {
+        display: block;
+    }
+
+    nav {
+        display         : none;
+        position        : absolute;
+        right           : 0px;
+        top             : 58px;
+        background-color: #0c0507;
+        padding         : 0px;
+        z-index         : 99;
+    }
+
+    nav ul {
+        width: auto;
+    }
+
+    nav ul li {
+        float  : none;
+        padding: 0px;
+        width  : 100%;
+        display: table;
+    }
+
+    nav ul li a {
+        color        : #f9f9f9;
+        font-size    : 15px;
+        padding      : 10px 20px;
+        display      : block;
+        border-bottom: 1px solid #364e68;
+    }
+
+    nav ul li a i {
+        color        : #f9f9f9;
+        padding-right: 15px;
+    }
+}
