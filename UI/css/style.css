@@ -110,6 +110,10 @@ input[type=checkbox], label {
     display: none;
 }
 
+main {
+    flex: 1;
+}
+
 .about-content {
     margin    : 0px auto 40px auto;
     display   : table;
@@ -124,24 +128,51 @@ input[type=checkbox], label {
 }
 
 #motto {
-    font-weight: bold;
-    font-size  : 24px;
-    width      : 20ch;
-    margin     : 2em 1em;
-    white-space: nowrap;
-    overflow   : hidden;
-    animation  : typing 2s steps(20, end);
+    font-weight  : bold;
+    font-size    : 24px;
+    width        : 20ch;
+    margin       : 2em 1em;
+    white-space  : nowrap;
+    overflow     : hidden;
+    border-bottom: 2px solid black;
+    animation    : typing 2s steps(20, end);
 }
 
 #description {
     font-size: 18px;
     font-size: bold;
-    border   : 2px solid #f0780b;
-    padding  : 10px;
+    /*border   : 2px solid #f0780b;*/
+    padding: 10px;
 }
 
-main {
-    flex: 1;
+footer {
+    display         : table;
+    padding-top     : 10px;
+    padding-bottom  : 30px;
+    width           : 100%;
+    background-color: #f5851f;
+    flex            : 0 0 auto;
+}
+
+.social-media {
+    margin : 0px auto;
+    display: table;
+}
+
+.social-media li {
+    float  : left;
+    padding: 0px 20px;
+}
+
+.social-media li a {
+    color     : #0c0507;
+    transition: all 0.5s ease 0s;
+    font-size : 30px;
+}
+
+.social-media li a:hover {
+    color     : #f9f9f9;
+    transition: all 0.5s ease 0s;
 }
 
 @media only screen and (max-width: 1400px) {
