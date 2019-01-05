@@ -207,6 +207,48 @@ main {
     color     : #ffffff;
 }
 
+.meetup-timeline {
+    margin        : 0 auto;
+    padding       : 10px;
+    width         : 60%;
+    display       : flex;
+    flex-direction: column;
+}
+
+.meetup-search-container {
+    width        : 60%;
+    margin-bottom: 20px;
+}
+
+.meetup-search-details {
+    width   : 100%;
+    position: relative;
+}
+
+.meetup-search {
+    float    : left;
+    width    : 100%;
+    border   : 3px solid #f0780b;
+    padding  : 5px;
+    height   : 20px;
+    outline  : none;
+    color    : black;
+    font-size: 14px;
+}
+
+.meetup-search-btn {
+    position  : absolute;
+    right     : -50px;
+    width     : 40px;
+    height    : 36px;
+    border    : 1px solid #f0780b;
+    background: #f0780b;
+    text-align: center;
+    color     : #fff;
+    cursor    : pointer;
+    font-size : 20px;
+}
+
 footer {
     display         : table;
     padding-top     : 10px;
@@ -304,5 +346,9 @@ footer {
     nav ul li a i {
         color        : #f9f9f9;
         padding-right: 15px;
+    }
+
+    .meetup-timeline {
+        width: 90%;
     }
 }
