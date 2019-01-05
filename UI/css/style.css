@@ -370,6 +370,55 @@ main {
     margin-left: 5px;
 }
 
+.comments {
+    border-top: 1px solid gray;
+}
+
+.comments p {
+    color: gray;
+}
+
+.username {
+    color      : black;
+    font-weight: 700;
+}
+
+.comments, .question-comment-container {
+    margin-top : 10px;
+    padding-top: 5px;
+}
+
+.add-comment-btn {
+    margin-bottom   : 5px;
+    border          : none;
+    padding         : 5px;
+    background-color: #f9f9f9;
+    text-transform  : uppercase;
+    color           : #f0780b;
+    font-weight     : 800;
+    border          : 1px solid black;
+}
+
+.add-comment-btn:hover {
+    border: 2px solid black;
+}
+
+.comment-post {
+    display: none;
+}
+
+.comment-textarea {
+    width  : 90%;
+    border : 3px solid #cccccc;
+    padding: 5px;
+    resize : vertical;
+}
+
+.comment-btn {
+    padding    : 2px;
+    font-weight: 700;
+}
+
 footer {
     display         : table;
     padding-top     : 10px;
