@@ -37,6 +37,7 @@ header {
     display      : table;
     margin-bottom: 10px;
     flex         : 0 0 auto;
+    border-bottom: 1px solid lightgray;
 }
 
 #logo {
