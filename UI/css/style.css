@@ -249,10 +249,41 @@ main {
     font-size : 20px;
 }
 
+.meetup-feed {
+    margin-top: 20px;
+    padding   : 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.meetup-post {
+    width           : 80%;
+    background-color: #ffffff;
+    height          : 200%;
+}
+
+.meetup-title {
+    margin-top: 10px
+}
+
+.meetup-title p {
+    font-weight  : 900;
+    font-size    : 18px;
+    border-bottom: 1px solid black;
+    color        : #0c0507;
+}
+.meetup-date-time {
+    margin-top: 20px;
+}
+
+.meetup-date-time p {
+    color: #585b60;
+}
+
 footer {
     display         : table;
     padding-top     : 10px;
     padding-bottom  : 30px;
+    margin-top      : 40px;
     width           : 100%;
     background-color: #f5851f;
     flex            : 0 0 auto;
