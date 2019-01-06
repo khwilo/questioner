@@ -442,8 +442,20 @@ main {
     font-weight     : 700;
 }
 
-.count {
+.question-count {
     color: #ffffff;
+}
+
+.question-feed-label {
+    border-bottom: 4px solid #f0780b;
+    margin       : 10px 0 20px 0px;
+    padding      : 5px;
+    font-weight  : 700;
+    font-style   : italic;
+}
+
+.vote-count {
+    width: 10%;
 }
 
 footer {
@@ -552,5 +564,9 @@ footer {
 
     .posted-questions, .commeted-questions {
         width: 30%;
+    }
+
+    .vote-count {
+        width: 20%;
     }
 }
