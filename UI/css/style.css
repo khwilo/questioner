@@ -207,7 +207,7 @@ main {
     color     : #ffffff;
 }
 
-.meetup-timeline {
+.meetup-timeline, .user-profile-container {
     margin        : 0 auto;
     padding       : 10px;
     width         : 60%;
@@ -419,6 +419,33 @@ main {
     font-weight: 700;
 }
 
+.user-profile-details {
+    display        : flex;
+    flex-direction : row;
+    padding        : 10px;
+    justify-content: space-between;
+}
+
+.user-profile-name {
+    display      : flex;
+    align-items  : center;
+    font-weight  : 900;
+    font-size    : 18px;
+    border-bottom: 1px solid #f0780b;
+}
+
+.posted-questions, .commeted-questions {
+    background-color: #f0780b;
+    padding         : 10px;
+    width           : 15%;
+    box-shadow      : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    font-weight     : 700;
+}
+
+.count {
+    color: #ffffff;
+}
+
 footer {
     display         : table;
     padding-top     : 10px;
@@ -519,7 +546,11 @@ footer {
         padding-right: 15px;
     }
 
-    .meetup-timeline {
+    .meetup-timeline, .user-profile-container {
         width: 90%;
+    }
+
+    .posted-questions, .commeted-questions {
+        width: 30%;
     }
 }
