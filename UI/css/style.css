@@ -461,10 +461,6 @@ main {
     width: 10%;
 }
 
-.create-meetup-container {
-    margin: 0 auto;
-}
-
 .create-meetup-label {
     text-align : center;
     margin-top : 20px;
@@ -515,13 +511,42 @@ main {
     width           : 190px;
 }
 
-.meetup-create-btn {
+.meetup-create-btn, .meetup-delete-btn {
     width           : 100px;
     background-color: #f0780b;
     color           : white;
     border-style    : none;
     padding         : 5px;
     box-shadow      : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.dashboard-container {
+    margin: 20px 20px 20px 120px;
+}
+
+.meetup-info {
+    background   : #fff;
+    border-radius: 2px;
+    display      : inline-block;
+    height       : 200px;
+    margin       : 1rem;
+    position     : relative;
+    width        : 300px;
+    padding      : 20px 10px 20px 10px;
+    box-shadow   : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    overflow-wrap: break-word;
+    overflow     : hidden;
+}
+
+.meetup-delete-btn {
+    position: absolute;
+    bottom  : 10px;
+    left    : 10px;
+}
+
+.meetup-delete-btn:hover {
+    color      : black;
+    font-weight: bold;
 }
 
 footer {
@@ -634,5 +659,9 @@ footer {
 
     .vote-count {
         width: 20%;
+    }
+
+    .dashboard-container {
+        margin: 10px;
     }
 }
