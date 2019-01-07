@@ -207,7 +207,7 @@ main {
     color     : #ffffff;
 }
 
-.meetup-timeline, .user-profile-container {
+.meetup-timeline, .user-profile-container, .create-meetup-container {
     margin        : 0 auto;
     padding       : 10px;
     width         : 60%;
@@ -254,7 +254,7 @@ main {
     padding   : 10px;
 }
 
-.meetup-post {
+.meetup-post, .create-meetup-details {
     width           : 80%;
     background-color: #ffffff;
     box-shadow      : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -407,11 +407,14 @@ main {
     display: none;
 }
 
-.comment-textarea {
-    width  : 90%;
+.comment-textarea, .meetup-create-textarea {
     border : 3px solid #cccccc;
     padding: 5px;
     resize : vertical;
+}
+
+.comment-textarea {
+    width: 90%;
 }
 
 .comment-btn {
@@ -456,6 +459,69 @@ main {
 
 .vote-count {
     width: 10%;
+}
+
+.create-meetup-container {
+    margin: 0 auto;
+}
+
+.create-meetup-label {
+    text-align : center;
+    margin-top : 20px;
+    font-style : italic;
+    font-size  : 24px;
+    font-weight: 700;
+    color      : #f0780b;
+}
+
+.create-meetup-form {
+    display       : flex;
+    flex-direction: column;
+    padding       : 20px;
+}
+
+.meetup-title-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn {
+    margin-top: 10px;
+    font-size : 18px;
+}
+
+.meetup-title-input {
+    border-radius: 0;
+    border-style : none;
+    border-bottom: 1px solid gray;
+}
+
+.meetup-create-textarea {
+    height     : 100px;
+    line-height: 1.4em;
+}
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.meetup-date-input {
+    border          : 1px solid gray;
+    background-color: #fff;
+    padding         : 5px;
+    width           : 190px;
+}
+
+.meetup-create-btn {
+    width           : 100px;
+    background-color: #f0780b;
+    color           : white;
+    border-style    : none;
+    padding         : 5px;
+    box-shadow      : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 footer {
@@ -558,7 +624,7 @@ footer {
         padding-right: 15px;
     }
 
-    .meetup-timeline, .user-profile-container {
+    .meetup-timeline, .user-profile-container, .create-meetup-container {
         width: 90%;
     }
 
