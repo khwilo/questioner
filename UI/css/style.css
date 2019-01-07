@@ -511,7 +511,7 @@ main {
     width           : 190px;
 }
 
-.meetup-create-btn, .meetup-delete-btn {
+.meetup-create-btn, .meetup-delete-btn, .meetup-join-btn {
     width           : 100px;
     background-color: #f0780b;
     color           : white;
@@ -544,9 +544,13 @@ main {
     left    : 10px;
 }
 
-.meetup-delete-btn:hover {
+.meetup-delete-btn:hover, .meetup-join-btn:hover {
     color      : black;
     font-weight: bold;
+}
+
+.meetup-join-btn {
+    margin-top: 10px;
 }
 
 footer {
