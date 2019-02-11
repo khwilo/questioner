@@ -45,14 +45,15 @@
             <div id="sign-up">
                 <div class="form-control">
                     <p id="form-description">ACCOUNT REGISTRATION</p>
-                    <form class="registration-form" action="signin.html">
-                        <input class="user-details-input" type="text" placeholder="Enter your first name" required />
-                        <input class="user-details-input" type="text" placeholder="Enter your lastname" required />
-                        <input class="user-details-input" type="text" placeholder="Enter your othername" required />
-                        <input class="user-details-input" type="text" placeholder="Enter a username" required />
-                        <input class="user-details-input" type="email" placeholder="Enter your email address" required />
-                        <input class="user-details-input" type="password" placeholder="Enter a password" required />
-                        <button>Sign Up</button>
+                    <form id="user-sign-up" class="registration-form">
+                        <input type="text"     id="firstname"   class="user-details-input" placeholder="Enter your first name" required>
+                        <input type="text"     id="lastname"    class="user-details-input" placeholder="Enter your lastname" required>
+                        <input type="text"     id="othername"   class="user-details-input" placeholder="Enter your othername" required>
+                        <input type="text"     id="username"    class="user-details-input" placeholder="Enter a username" required>
+                        <input type="email"    id="email"       class="user-details-input" placeholder="Enter your email address" required>
+                        <input type="tel"      id="phoneNumber" class="user-details-input" placeholder="Enter your phone number" required>
+                        <input type="password" id="password"    class="user-details-input" placeholder="Enter a password" required>
+                        <button type="submit"  id="signup-btn">Sign Up</button>
                         <p class="message">Already have an account? <a href="signin.html">Sign In</a></p>
                     </form>
                 </div>
@@ -66,5 +67,7 @@
             </ul>
         </footer>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
