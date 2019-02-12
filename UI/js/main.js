@@ -1,8 +1,21 @@
 const userRegistrationForm = document.getElementById('user-sign-up');
 
-userRegistrationForm.addEventListener('submit', addUser);
+const modal        = document.querySelector(".modal");
+const closeDisplay = document.querySelector(".close-display");
+const modalDisplay = document.querySelector(".modal-display");
 
-function addUser(e) {
+const toggleModal = (data) => {
+    modalDisplay.innerHTML = `${data}`;
+    modal.classList.toggle("show-modal");
+};
+
+const windowOnClick = (event) => {
+    if (event.target === modal) {
+        toggleModal();
+    }
+};
+
+const addUser = (e) => {
     e.preventDefault();
 
     const userDetails = {
@@ -23,6 +36,16 @@ function addUser(e) {
         }
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+        if (data.status == 201) {
+            toggleModal(data.data[0].message);
+        } else {
+            toggleModal(data.message.error);
+        }
+    })
     .catch(err => console.log(err));
-}
+};
+
+userRegistrationForm.addEventListener('submit', addUser);
+closeDisplay.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
