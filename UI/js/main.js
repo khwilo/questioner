@@ -43,7 +43,9 @@ const addUser = (e) => {
             toggleModal(data.message.error);
         }
     })
-    .catch(err => console.log(err));
+    .catch(_err => {
+        toggleModal("There's a problem connecting to the server. Email khwilowatai@gmail.com for further assistance.");
+    });
 };
 
 userRegistrationForm.addEventListener('submit', addUser);
