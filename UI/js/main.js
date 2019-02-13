@@ -28,7 +28,7 @@ const addUser = (e) => {
         'password'   : document.getElementById('password').value
     };
 
-    fetch('http://127.0.0.1:5000/api/v2/auth/signup', {
+    fetch('https://q-questioner-api.herokuapp.com/api/v2/auth/signup', {
         method : 'POST',
         body   : JSON.stringify(userDetails),
         headers: {
