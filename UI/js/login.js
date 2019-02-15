@@ -40,7 +40,7 @@ const logInUser = (e) => {
         }
     })
     .catch(_err => {
-        toggleModal("There's a problem connecting to the server. Email khwilowatai@gmail.com for further assistance.");
+        toggleModal(_err.message + ". Email khwilowatai@gmail.com for further assistance.");
     });
 };
 
