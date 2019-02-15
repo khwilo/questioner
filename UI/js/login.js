@@ -34,7 +34,7 @@ const logInUser = (e) => {
     .then(data => {
         if (data.status == 200) {
             location.href = "explore.html";
-            localStorage.setItem('userAccessToken', data.data[0].token);
+            localStorage.setItem('accessToken', data.data[0].token);
         } else {
             toggleModal(data.message.error);
         }
