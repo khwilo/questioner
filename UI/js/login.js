@@ -1,4 +1,4 @@
-const userRegistrationForm = document.getElementById('user-sign-up');
+const userSignInForm = document.getElementById('user-sign-in');
 
 const modal        = document.querySelector(".modal");
 const closeDisplay = document.querySelector(".close-display");
@@ -15,30 +15,30 @@ const windowOnClick = (event) => {
     }
 };
 
-const addUser = (e) => {
+const logInUser = (e) => {
     e.preventDefault();
 
-    const userDetails = {
-        'firstname'  : document.getElementById('firstname').value,
-        'lastname'   : document.getElementById('lastname').value,
-        'othername'  : document.getElementById('othername').value,
-        'username'   : document.getElementById('username').value,
-        'email'      : document.getElementById('email').value,
-        'phoneNumber': document.getElementById('phoneNumber').value,
-        'password'   : document.getElementById('password').value
+    const userSignInDetails = {
+        'username': document.getElementById('username').value,
+        'password': document.getElementById('password').value
     };
 
-    fetch('https://q-questioner-api.herokuapp.com/api/v2/auth/signup', {
+    fetch('https://q-questioner-api.herokuapp.com/api/v2/auth/login', {
         method : 'POST',
-        body   : JSON.stringify(userDetails),
+        body   : JSON.stringify(userSignInDetails),
         headers: {
             'Content-Type': 'application/json'
         }
     })
     .then(res => res.json())
     .then(data => {
-        if (data.status == 201) {
-            toggleModal(data.data[0].message);
+        if (data.status == 200) {
+            localStorage.setItem('accessToken', data.data[0].token);
+            if (data.data[0].user.isAdmin) {
+                location.href = "dashboard.html";
+            } else {
+                location.href = "explore.html";
+            }
         } else {
             toggleModal(data.message.error);
         }
@@ -48,6 +48,6 @@ const addUser = (e) => {
     });
 };
 
-userRegistrationForm.addEventListener('submit', addUser);
+userSignInForm.addEventListener('submit', logInUser);
 closeDisplay.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
