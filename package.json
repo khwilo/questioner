@@ -1,23 +1,24 @@
 {
-  "name"        : "questioner",
-  "version"     : "1.0.0",
-  "description" : "Crowd-source questions for a meetup",
-  "main"        : "index.js",
+  "name": "questioner",
+  "version": "1.0.0",
+  "description": "Crowd-source questions for a meetup",
+  "main": "index.js",
   "dependencies": {
-    "jshint": "^2.10.1"
+    "jshint": "^2.10.1",
+    "moment": "^2.24.0"
   },
   "devDependencies": {},
-  "scripts"        : {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url" : "https://github.com/khwilo/questioner.git"
+    "url": "https://github.com/khwilo/questioner.git"
   },
   "keywords": [],
-  "author"  : "",
-  "license" : "ISC",
-  "bugs"    : {
+  "author": "",
+  "license": "ISC",
+  "bugs": {
     "url": "https://github.com/khwilo/questioner/issues"
   },
   "homepage": "https://github.com/khwilo/questioner"
