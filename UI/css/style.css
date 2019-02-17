@@ -504,11 +504,15 @@ main {
     opacity: 0;
 }
 
-.meetup-date-input {
+.meetup-date-input, #meetup-time {
     border          : 1px solid gray;
     background-color: #fff;
     padding         : 5px;
     width           : 190px;
+}
+
+#meetup-time {
+    font-size: 18px;
 }
 
 .meetup-create-btn, .meetup-delete-btn, .meetup-join-btn {
