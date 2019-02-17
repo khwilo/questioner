@@ -9,9 +9,10 @@ const createMeetup = (e) => {
     const meetupTitle       = document.getElementById('meetup-title').value;
     const meetupDescription = document.getElementById('meetup-description').value;
     const meetupDate        = document.getElementById('meetup-date').value;
+    const meetupTime        = document.getElementById('meetup-time').value;
 
-    const time = moment().format('LT');
     const date = moment(meetupDate).format('MMM D YYYY');
+    const time = moment(`${meetupTime}`, 'HH:mm').format('LT');
 
     meetup.push(meetupTitle);
     meetup.push(meetupDescription);
