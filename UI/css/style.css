@@ -476,15 +476,16 @@ main {
     padding       : 20px;
 }
 
-.meetup-title-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn {
+.meetup-title-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn, .meetup-location-input {
     margin-top: 10px;
     font-size : 18px;
 }
 
-.meetup-title-input {
+.meetup-title-input, .meetup-location-input {
     border-radius: 0;
     border-style : none;
     border-bottom: 1px solid gray;
+    margin       : 10px 0px 5px 0px;
 }
 
 .meetup-create-textarea {
