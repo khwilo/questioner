@@ -4,23 +4,29 @@ const clickBtn = document.getElementById('click-me');
 const createMeetup = (e) => {
     e.preventDefault();
 
-    const meetup = [];
+    const meetupDate = document.getElementById('meetup-date').value;
+    const meetupTime = document.getElementById('meetup-time').value;
+    const date       = moment(meetupDate).format('MMM D YYYY');
+    const time       = moment(`${meetupTime}`, 'HH:mm').format('LT');
 
-    const meetupTitle       = document.getElementById('meetup-title').value;
-    const meetupDescription = document.getElementById('meetup-description').value;
-    const meetupLocation    = document.getElementById('meetup-location').value;
-    const meetupDate        = document.getElementById('meetup-date').value;
-    const meetupTime        = document.getElementById('meetup-time').value;
+    const meetupDetails = {
+        'topic'      : document.getElementById('meetup-topic').value,
+        'description': document.getElementById('meetup-description').value,
+        'location'   : document.getElementById('meetup-location').value,
+        'happeningOn': `${date}, ${time}`
+    };
 
-    const date = moment(meetupDate).format('MMM D YYYY');
-    const time = moment(`${meetupTime}`, 'HH:mm').format('LT');
-
-    meetup.push(meetupTitle);
-    meetup.push(meetupDescription);
-    meetup.push(meetupLocation);
-    meetup.push(`${date}, ${time}`);
-
-    console.log(meetup);
+    fetch('http://127.0.0.1:5000/api/v2/meetups', {
+        method : 'POST',
+        body   : JSON.stringify(meetupDetails),
+        headers: {
+            'Content-Type' : 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 };
 
 createMeetupForm.addEventListener('submit', createMeetup);
