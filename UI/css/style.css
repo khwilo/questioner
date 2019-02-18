@@ -511,8 +511,17 @@ main {
     width           : 190px;
 }
 
+#meetup-date-label, #meetup-time-label {
+    display    : block;
+    margin-top : 5px;
+    font-weight: 700;
+    font-style : italic;
+    color      : #f0780b;
+}
+
 #meetup-time {
-    font-size: 18px;
+    margin-top: 10px;
+    font-size : 18px;
 }
 
 .meetup-create-btn, .meetup-delete-btn, .meetup-join-btn {
