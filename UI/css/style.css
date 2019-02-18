@@ -260,11 +260,11 @@ main {
     box-shadow      : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.meetup-title {
+.meetup-topic {
     margin-top: 10px
 }
 
-.meetup-title p {
+.meetup-topic p {
     font-weight  : 900;
     font-size    : 18px;
     border-bottom: 1px solid black;
@@ -476,12 +476,12 @@ main {
     padding       : 20px;
 }
 
-.meetup-title-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn, .meetup-location-input {
+.meetup-topic-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn, .meetup-location-input {
     margin-top: 10px;
     font-size : 18px;
 }
 
-.meetup-title-input, .meetup-location-input {
+.meetup-topic-input, .meetup-location-input {
     border-radius: 0;
     border-style : none;
     border-bottom: 1px solid gray;
