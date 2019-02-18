@@ -8,6 +8,7 @@ const createMeetup = (e) => {
 
     const meetupTitle       = document.getElementById('meetup-title').value;
     const meetupDescription = document.getElementById('meetup-description').value;
+    const meetupLocation    = document.getElementById('meetup-location').value;
     const meetupDate        = document.getElementById('meetup-date').value;
     const meetupTime        = document.getElementById('meetup-time').value;
 
@@ -16,6 +17,7 @@ const createMeetup = (e) => {
 
     meetup.push(meetupTitle);
     meetup.push(meetupDescription);
+    meetup.push(meetupLocation);
     meetup.push(`${date}, ${time}`);
 
     console.log(meetup);
