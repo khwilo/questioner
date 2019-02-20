@@ -7,9 +7,10 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
 })
 .then(res => res.json())
 .then(data => {
-    let meetups    = data.data;
-    let meetupData = '';
-    meetups.forEach(meetup => {
+    if (data.status == 200) {
+        let meetups    = data.data;
+        let meetupData = '';
+        meetups.forEach(meetup => {
         meetupData += `
             <div class="meetup-feed meetup-post">
                 <div class="meetup-title">
@@ -22,7 +23,10 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
                 <button class="meetup-join-btn" onclick="location.href='meetup.html'">JOIN</button>
             </div>
         `;
-    });
-    meetUpTimeline.innerHTML += meetupData;
+        });
+        meetUpTimeline.innerHTML += meetupData;
+    } else {
+        console.log(data ? data.msg : data.message.error);
+    }
 })
 .catch(err => console.log(err));
