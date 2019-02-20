@@ -270,12 +270,18 @@ main {
     border-bottom: 1px solid black;
     color        : #0c0507;
 }
-.meetup-date-time {
+.meetup-date-time, .meetup-location {
     margin-top: 20px;
 }
 
 .meetup-date-time p {
     color: #585b60;
+}
+
+.meetup-location p {
+    color      : #f0780b;
+    font-style : italic;
+    font-weight: 700;
 }
 
 .meetup-details {
