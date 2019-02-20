@@ -619,6 +619,10 @@ main {
     color    : #f5851f;
 }
 
+.meetup-id-display {
+    display: none;
+}
+
 footer {
     display         : table;
     padding-top     : 10px;
