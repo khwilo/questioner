@@ -15,7 +15,7 @@ const windowOnClick = (event) => {
     }
 };
 
-fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
+fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
     }
