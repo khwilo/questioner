@@ -17,7 +17,7 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
                     <p>${meetup.topic.toUpperCase()}</p>
                 </div>
                 <div class="meetup-date-time">
-                    <p>${meetup.happeningOn}</p>
+                    <p>${moment(meetup.happeningOn).format('dddd do MMMM YYYY, h:mm A')}</p>
                 </div>
                 <div class="meetup-id-display">${meetup.id}</div>
                 <button class="meetup-join-btn" onclick="location.href='meetup.html'">JOIN</button>
