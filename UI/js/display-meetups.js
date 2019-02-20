@@ -41,7 +41,7 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
         });
         meetUpTimeline.innerHTML += meetupData;
     } else {
-        console.log(data ? toggleModal(data.msg) : toggleModal(data.message.error));
+        return data ? toggleModal(data.msg): toggleModal(data.message.error);
     }
 })
 .catch(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
