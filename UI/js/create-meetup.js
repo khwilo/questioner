@@ -30,7 +30,7 @@ const createMeetup = (e) => {
         'happeningOn': `${date}, ${time}`
     };
 
-    fetch('http://127.0.0.1:5000/api/v2/meetups', {
+    fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups', {
         method : 'POST',
         body   : JSON.stringify(meetupDetails),
         headers: {
