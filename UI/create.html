@@ -25,7 +25,7 @@
                 <nav>
                     <ul>
                         <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="admin-login.html">Sign Out</a></li>
+                        <li><a href="signin.html">Sign Out</a></li>
                     </ul>
                 </nav>
             </section>
@@ -36,15 +36,26 @@
                     <div class="create-meetup-container">
                         <div class="create-meetup-details">
                             <p class="create-meetup-label">Create Meetup</p>
-                            <form class="create-meetup-form">
-                                <input type="text" class="meetup-title-input" placeholder="Meetup Title">
-                                <textarea class="meetup-create-textarea" placeholder="Meetup Description"></textarea>
-                                <input type="date" class="meetup-date-input">
-                                <button class="meetup-create-btn">Create</button>
+                            <form id="create-meetup" class="create-meetup-form">
+                                <input type="text" id="meetup-topic" class="meetup-topic-input" placeholder="Meetup Topic">
+                                <textarea id="meetup-description" class="meetup-create-textarea" placeholder="Meetup Description"></textarea>
+                                <input type="text" id="meetup-location" class="meetup-location-input" placeholder="Meetup Location">
+                                <label id="meetup-date-label" for="meetup-date">Select the date for the meetup:</label>
+                                <input type="date" id="meetup-date" class="meetup-date-input" required>
+                                <label id="meetup-time-label" for="meetup-time">Select the time for the meetup:</label>
+                                <input type="time" name="meetup-time" id="meetup-time" required>
+                                <button type="submit" class="meetup-create-btn">Create</button>
                             </form>
                         </div>
                     </div>
                 </section>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-display">&times;</span>
+                        <br>
+                        <p class="modal-display">CONTENT</p>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
@@ -55,5 +66,8 @@
             </ul>
         </footer>
     </div>
+
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="js/create-meetup.js"></script>
 </body>
 </html>

@@ -260,11 +260,11 @@ main {
     box-shadow      : 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.meetup-title {
+.meetup-topic {
     margin-top: 10px
 }
 
-.meetup-title p {
+.meetup-topic p {
     font-weight  : 900;
     font-size    : 18px;
     border-bottom: 1px solid black;
@@ -476,15 +476,16 @@ main {
     padding       : 20px;
 }
 
-.meetup-title-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn {
+.meetup-topic-input, .meetup-create-textarea, .meetup-date-input, .meetup-create-btn, .meetup-location-input {
     margin-top: 10px;
     font-size : 18px;
 }
 
-.meetup-title-input {
+.meetup-topic-input, .meetup-location-input {
     border-radius: 0;
     border-style : none;
     border-bottom: 1px solid gray;
+    margin       : 10px 0px 5px 0px;
 }
 
 .meetup-create-textarea {
@@ -504,11 +505,24 @@ main {
     opacity: 0;
 }
 
-.meetup-date-input {
+.meetup-date-input, #meetup-time {
     border          : 1px solid gray;
     background-color: #fff;
     padding         : 5px;
     width           : 190px;
+}
+
+#meetup-date-label, #meetup-time-label {
+    display    : block;
+    margin-top : 5px;
+    font-weight: 700;
+    font-style : italic;
+    color      : #f0780b;
+}
+
+#meetup-time {
+    margin-top: 10px;
+    font-size : 18px;
 }
 
 .meetup-create-btn, .meetup-delete-btn, .meetup-join-btn {
