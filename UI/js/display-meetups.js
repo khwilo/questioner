@@ -1,5 +1,20 @@
 const meetUpTimeline = document.getElementById('meetup-timeline-display');
 
+const modal        = document.querySelector(".modal");
+const closeDisplay = document.querySelector(".close-display");
+const modalDisplay = document.querySelector(".modal-display");
+
+const toggleModal = (data) => {
+    modalDisplay.innerHTML = `${data}`;
+    modal.classList.toggle("show-modal");
+};
+
+const windowOnClick = (event) => {
+    if (event.target === modal) {
+        toggleModal();
+    }
+};
+
 fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -26,14 +41,13 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
         });
         meetUpTimeline.innerHTML += meetupData;
     } else {
-        console.log(data ? data.msg : data.message.error);
+        console.log(data ? toggleModal(data.msg) : toggleModal(data.message.error));
     }
 })
-.catch(err => console.log(err));
+.catch(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
 
 const meetupSearch = (search_term) => {
     search = search_term.value.toLowerCase();
-    console.log(search_term.value);
     document.querySelectorAll('.meetup-feed').forEach(function(row) {
         text = row.innerText.toLowerCase();
         if (text.match(search)) {
@@ -43,3 +57,6 @@ const meetupSearch = (search_term) => {
         }
     });
 };
+
+closeDisplay.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
