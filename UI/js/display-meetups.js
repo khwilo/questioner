@@ -28,7 +28,7 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
         meetups.forEach(meetup => {
         meetupData += `
             <div class="meetup-feed meetup-post">
-                <div class="meetup-title">
+                <div class="meetup-topic">
                     <p>${meetup.topic.toUpperCase()}</p>
                 </div>
                 <div class="meetup-date-time">
