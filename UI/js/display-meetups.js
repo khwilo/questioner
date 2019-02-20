@@ -30,3 +30,16 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
     }
 })
 .catch(err => console.log(err));
+
+const meetupSearch = (search_term) => {
+    search = search_term.value.toLowerCase();
+    console.log(search_term.value);
+    document.querySelectorAll('.meetup-feed').forEach(function(row) {
+        text = row.innerText.toLowerCase();
+        if (text.match(search)) {
+            row.style.display = "block";
+        } else {
+            row.style.display = "none";
+        }
+    });
+};
