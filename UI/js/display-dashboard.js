@@ -1,4 +1,4 @@
-const dashboardDisplay = document.getElementById('dashboard-display');
+const dashboardDisplay = document.getElementById("dashboard-display");
 
 const modal        = document.querySelector(".modal");
 const closeDisplay = document.querySelector(".close-display");
@@ -27,7 +27,7 @@ fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
         let meetupData = '';
         meetups.forEach(meetup => {
             meetupData += `
-                <div id=${meetup.id} class="meetup-info">
+                <div id="meetup-${meetup.id}" class="meetup-info">
                     <div class="meetup-title">
                         <p>${meetup.topic.toUpperCase()}</p>
                     </div>
@@ -38,13 +38,18 @@ fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
                         <p>${moment(meetup.happeningOn).format('dddd do MMMM YYYY, h:mm A')}</p>
                     </div>
                     <div class="meetup-id-display">${meetup.id}</div>
-                    <button class="meetup-delete-btn" onclick="getElementById(${meetup.id}).style.display='none'">DELETE</button>
+                    <button id="meetup-delete-${meetup.id}" class="meetup-delete-btn" onclick="getElementById('meetup-${meetup.id}').style.display='none'">DELETE</button>
                 </div>
             `;
         });
         dashboardDisplay.innerHTML += meetupData;
+        meetups.forEach(meetup => {
+            document.getElementById(`meetup-delete-${meetup.id}`).addEventListener('click', () => {
+                console.log(`Meetup with id ${meetup.id} has been deleted.`);
+            });
+        });
     } else {
-        return data ? toggleModal(data.msg): toggleModal(data.message.error);
+        return data.hasOwnProperty("msg") ? toggleModal(data.msg): toggleModal(data.message + ". Session has expired. You have to log in to view the page");
     }
 })
 .catch(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
