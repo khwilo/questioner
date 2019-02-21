@@ -45,15 +45,33 @@ fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
         dashboardDisplay.innerHTML += meetupData;
         meetups.forEach(meetup => {
             document.getElementById(`meetup-delete-${meetup.id}`).addEventListener('click', () => {
+                deleteMeetup(meetup.id);
                 document.getElementById(`meetup-${meetup.id}`).style.display = "none";
-                console.log(`Meetup with id ${meetup.id} has been deleted.`);
             });
         });
     } else {
-        return data.hasOwnProperty("msg") ? toggleModal(data.msg): toggleModal(data.message + ". Session has expired. You have to log in to view the page");
+        return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty(data.message) ? toggleModal(data.message): toggleModal(data.message.error);
     }
 })
 .catch(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
+
+const deleteMeetup = (meetupId) => {
+    fetch(`http://127.0.0.1:5000/api/v2/meetups/${meetupId}`, {
+        method : 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status == 200) {
+            toggleModal("Meetup has been succesfully deleted.");
+        } else {
+            toggleModal(data.message.error);
+        }
+    })
+    .then(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
+};
 
 closeDisplay.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
