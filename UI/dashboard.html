@@ -25,49 +25,20 @@
                 <nav>
                     <ul>
                         <li><a href="create.html">Create Meetup</a></li>
-                        <li><a href="admin-login.html">Sign Out</a></li>
+                        <li><a href="signin.html">Sign Out</a></li>
                     </ul>
                 </nav>
             </section>
         </header>
         <main>
             <div class="container">
-                <div class="dashboard-container">
-                    <div id="meetup-1" class="meetup-info">
-                        <div class="meetup-title">
-                            <p>EXPLORING ELEMENTS OF UI/UX DESIGN</p>
-                        </div>
-                        <div class="meetup-date-time">
-                            <p>Saturday 5th January, 2019 at 10:00 P.M</p>
-                        </div>
-                        <button class="meetup-delete-btn" onclick="getElementById('meetup-1').style.display='none'">DELETE</button>
-                    </div>
-                    <div id="meetup-2" class="meetup-info">
-                        <div class="meetup-title">
-                            <p>THE PURPOSE OF SERVICE IN VARIOUS RELIGIONS</p>
-                        </div>
-                        <div class="meetup-date-time">
-                            <p>Tuesday 8th January, 2019 at 6:00 P.M</p>
-                        </div>
-                        <button class="meetup-delete-btn" onclick="getElementById('meetup-2').style.display='none'">DELETE</button>
-                    </div>
-                    <div id="meetup-3" class="meetup-info">
-                        <div class="meetup-title">
-                            <p>THE RELATIONSHIP BETWEEN SOCCER AND EDUCATION IN THE MODERN ERA</p>
-                        </div>
-                        <div class="meetup-date-time">
-                            <p>Thursay 24th January, 2019 at 3:00 P.M</p>
-                        </div>
-                        <button class="meetup-delete-btn" onclick="getElementById('meetup-3').style.display='none'">DELETE</button>
-                    </div>
-                    <div id="meetup-4" class="meetup-info">
-                        <div class="meetup-title">
-                            <p>AFRICAN COUNTRIES AND THEIR QUEST TO LOOK EAST</p>
-                        </div>
-                        <div class="meetup-date-time">
-                            <p>Monday 11th February, 2019 at 9:00 A.M</p>
-                        </div>
-                        <button class="meetup-delete-btn" onclick="getElementById('meetup-4').style.display='none'">DELETE</button>
+                <div id="dashboard-display" class="dashboard-container">
+                </div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-display">&times;</span>
+                        <br>
+                        <p class="modal-display">CONTENT</p>
                     </div>
                 </div>
             </div>
@@ -80,5 +51,8 @@
             </ul>
         </footer>
     </div>
+
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="js/display-dashboard.js"></script>
 </body>
 </html>
