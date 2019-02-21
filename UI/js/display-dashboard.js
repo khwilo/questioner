@@ -15,7 +15,7 @@ const windowOnClick = (event) => {
     }
 };
 
-fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
+fetch('http://127.0.0.1:5000/api/v2/meetups/upcoming/', {
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
     }
@@ -38,13 +38,14 @@ fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
                         <p>${moment(meetup.happeningOn).format('dddd do MMMM YYYY, h:mm A')}</p>
                     </div>
                     <div class="meetup-id-display">${meetup.id}</div>
-                    <button id="meetup-delete-${meetup.id}" class="meetup-delete-btn" onclick="getElementById('meetup-${meetup.id}').style.display='none'">DELETE</button>
+                    <button id="meetup-delete-${meetup.id}" class="meetup-delete-btn">DELETE</button>
                 </div>
             `;
         });
         dashboardDisplay.innerHTML += meetupData;
         meetups.forEach(meetup => {
             document.getElementById(`meetup-delete-${meetup.id}`).addEventListener('click', () => {
+                document.getElementById(`meetup-${meetup.id}`).style.display = "none";
                 console.log(`Meetup with id ${meetup.id} has been deleted.`);
             });
         });
