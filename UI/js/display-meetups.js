@@ -41,7 +41,7 @@ fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
         });
         meetUpTimeline.innerHTML += meetupData;
     } else {
-        return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty(data.message) ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
+        return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty("message") ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
     }
 })
 .catch(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
