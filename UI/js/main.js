@@ -40,7 +40,7 @@ const addUser = (e) => {
         if (data.status == 201) {
             toggleModal(data.data[0].message);
         } else {
-            return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty(data.message) ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
+            return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty("message") ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
         }
     })
     .catch(err => {

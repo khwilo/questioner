@@ -50,7 +50,7 @@ fetch('https://q-questioner-api.herokuapp.com/api/v2/meetups/upcoming/', {
             });
         });
     } else {
-        return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty(data.message) ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
+        return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty("message") ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
     }
 })
 .catch(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
@@ -67,7 +67,7 @@ const deleteMeetup = (meetupId) => {
         if (data.status == 200) {
             toggleModal("Meetup has been succesfully deleted.");
         } else {
-            return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty(data.message) ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
+            return data.hasOwnProperty("msg") ? toggleModal(data.msg): data.hasOwnProperty("message") ? toggleModal("Your session has expired. Try to log in again."): toggleModal(data.message.error);
         }
     })
     .then(err => toggleModal(err.message + ". Email khwilowatai@gmail.com for further assistance."));
